@@ -8,32 +8,20 @@
     <title>Slider</title>
 </head>
 <body>
-    <div class="slider-container">
-        <div class="slide">
-            <img src="./beach.jpg" class="slide-img" alt="">
-            <h1>1</h1>
-        </div>
-        <div class="slide">
-           
-            <h1>2</h1>
-        </div>
-        <div class="slide">
-           
-            <h1>3</h1>
-        </div>
-        <div class="slide">
-            <img src="./forest.jpg" class="slide-img" alt="">
-            <h1>4</h1>
-        </div>
-    </div>
-    <div class="btn-container">
-        <button type="button" class="prevBtn">
+    <main>
+        <img src="beach.jpg" class="slide" alt="">
+        <img src="desert.jpg" class="slide" alt="">
+        <img src="forest.jpg" class="slide" alt="">
+        <img src="snowfall.jpg" class="slide" alt="">
+    </main>
+    <div class="nav">
+        <button onclick="goPrev()">
             Prev
         </button>
-        <button type="button" class="nextBtn">
+        <button onclick="goNext()">
             Next
         </button>
-    </div>
+    </div>      
     <script src="app.js"></script>  
 </body>
 </html>
