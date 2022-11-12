@@ -8,9 +8,10 @@ textarea.addEventListener("keyup" , (e) => {
     setTimeout(() => {
       e.target.value = ""
     }, 10)
-  }
-
+  
   randomSelect();
+    }
+
 });
 
 function createTags(input){
@@ -28,15 +29,18 @@ function createTags(input){
 
 function randomSelect(){
 
+  const times = 30;
+
   const interval = setInterval(() => {
     const randomTag = pickRandomTag();
 
+    if (randomTag !== undefined) {
     highlightTag(randomTag)
 
     setTimeout(() => {
       unHighlightTag(randomTag)
     }, 100);
-
+    }
   }, 100);
 
   setTimeout(() => {
@@ -48,7 +52,7 @@ function randomSelect(){
       highlightTag(randomTag)
     }, 100);
 
-  }, 30 * 100);
+  }, times * 100);
 }
 
 function pickRandomTag(){
