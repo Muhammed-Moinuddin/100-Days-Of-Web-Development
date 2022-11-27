@@ -4,6 +4,8 @@ const listItems = [];
 
 getData();
 
+filter.addEventListener("input",(e) => filterData(e.target.value));
+
 filter.addEventListener("input", (e) => filter)
 
 async function getData() {
@@ -25,4 +27,14 @@ async function getData() {
         `
         result.appendChild(li)
     });
+}
+
+function filterData(searchTerm) {
+    listItems.forEach(item => {
+       if(item.innerText.toLowerCase().includes(searchTerm.toLowerCase())){
+            item.classList.remove("hide")
+       } else {
+            item.classList.add("hide")
+       }
+    })
 }
