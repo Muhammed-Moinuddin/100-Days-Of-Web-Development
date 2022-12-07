@@ -10,29 +10,30 @@
 <body>
     <div class="first-div">
         <h1 id="main-heading">SMIT Attendance Application</h1>
-        <div class="admin-sign-in-panel" id="admin-sign-in-panel">
+        <form class="admin-sign-in-panel">
             <div id="login-heading-with-closing">
                 <h2 id="login-heading">Login</h2> 
-                <button id="close-panel">X</button>
+                <button id="admin-close-panel-button">X</button>
             </div>
-            <h3>Email</h3>
+            <h3 id="email-description">Email</h3>
             <input type="email" name="admin-email" id="admin-email" placeholder="Enter Email">
             <h3>Password</h3>
             <input type="password" name="admin-password" id="admin-password" placeholder="Enter Password">
-        </div>
-        <button id="admin-button">Sign-In (Admin)</button>
+            <input type="submit" id="submit-button" onclick="openAdminPanel(event)">
+        </form>
+        <button id="admin-button" onclick="popupPanel(1)">Sign-In (Admin)</button>
         <!---->
-        <div class="student-attendance-panel">
+        <form class="student-attendance-panel">
             <div id="login-heading-with-closing">
                 <h2 id="login-heading">Login</h2> 
-                <button id="close-panel">X</button>
+                <button id="student-close-panel-button">X</button>
             </div>
             <h3>Roll No</h3>
             <input type="text" name="student-rollno" id="student-rollno" placeholder="Enter Roll No." maxlength="20">
             <h3>Attendance</h3>
             <button id="mark-present">I'm Present</button>
-        </div>
-        <button id="student-button">Mark Attendance (Student)</button>
+        </form>
+        <button id="student-button" onclick="popupPanel(2)">Mark Attendance (Student)</button>
     </div>
     <script src="script.js"></script>
 </body>

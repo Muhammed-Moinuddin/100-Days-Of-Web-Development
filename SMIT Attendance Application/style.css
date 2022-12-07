@@ -10,7 +10,7 @@ body{
     align-items: center;
 }
 .first-div{
-    margin-top: 30vh;
+    margin-top: 10vh;
     border-radius: 25px;
     background-color: white;
     padding: 40px;
@@ -38,18 +38,18 @@ body{
     background-color: rgb(178, 217, 217);
 }
 
-#admin-sign-in-panel{
-    display: none ;
+.admin-sign-in-panel{
+    display: none !important;
     background-color: darkblue;
     color: white;
     display: flex;
     flex-direction: column;
-    
     justify-content: center;
     border-radius: 25px;
     padding: 5px 25px 25px 25px;
 }
 .admin-sign-in-panel > input , .student-attendance-panel > input {
+    width: 100%;
     padding: 10px 10px 10px 20px;
     font-size: 16px;
     border-radius: 25px;
@@ -66,6 +66,7 @@ body{
     border-bottom: 2px solid white; 
 }
 .student-attendance-panel{
+    display: none !important;
     background-color: darkblue;
     color: white;
     display: flex;
@@ -75,7 +76,7 @@ body{
     padding: 5px 25px 25px 25px;
 }
 
-#close-panel{
+#student-close-panel-button, #admin-close-panel-button{
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -85,6 +86,7 @@ body{
     padding: 0px 12px 0px 12px;
 }
 #mark-present{
+    width: 100%;
     padding: 10px;
     background-color: yellow;
     font-size: 16px;
@@ -93,6 +95,19 @@ body{
     border-radius: 25px;
     border: 2px solid cyan;  
 }
+
+#submit-button{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: yellow;
+    font-size: 16px;
+    font-weight: 800;
+    color: darkblue;
+    border-radius: 25px;
+    border: 2px solid cyan; 
+}
+
 #mark-present:hover{
     background-color: rgb(223, 223, 0);
 }
