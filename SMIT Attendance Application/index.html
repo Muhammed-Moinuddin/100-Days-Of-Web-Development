@@ -13,7 +13,7 @@
         <form class="admin-sign-in-panel">
             <div id="login-heading-with-closing">
                 <h2 id="login-heading">Login</h2> 
-                <button id="admin-close-panel-button">X</button>
+                <button id="admin-close-panel-button" onclick="PopupPanel(2)">X</button>
             </div>
             <h3 id="email-description">Email</h3>
             <input type="email" name="admin-email" id="admin-email" placeholder="Enter Email">
@@ -21,19 +21,19 @@
             <input type="password" name="admin-password" id="admin-password" placeholder="Enter Password">
             <input type="submit" id="submit-button" onclick="openAdminPanel(event)">
         </form>
-        <button id="admin-button" onclick="popupPanel(1)">Sign-In (Admin)</button>
+        <button id="admin-button" onclick="PopupPanel(2)">Sign-In (Admin)</button>
         <!---->
         <form class="student-attendance-panel">
             <div id="login-heading-with-closing">
                 <h2 id="login-heading">Login</h2> 
-                <button id="student-close-panel-button">X</button>
+                <button id="student-close-panel-button" onclick="PopupPanel(1)">X</button>
             </div>
             <h3>Roll No</h3>
             <input type="text" name="student-rollno" id="student-rollno" placeholder="Enter Roll No." maxlength="20">
             <h3>Attendance</h3>
             <button id="mark-present">I'm Present</button>
         </form>
-        <button id="student-button" onclick="popupPanel(2)">Mark Attendance (Student)</button>
+        <button id="student-button" onclick="PopupPanel(1)">Mark Attendance (Student)</button>
     </div>
     <script src="script.js"></script>
 </body>

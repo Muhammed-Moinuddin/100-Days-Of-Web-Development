@@ -3,13 +3,7 @@ const studentButton = document.getElementById("student-button");
 const studentCloseButton = document.getElementById("student-close-panel-button");
 const adminCloseButton = document.getElementById("admin-close-panel-button");
 const submitButton = document.getElementById("submit-button");
-
-if (studentCloseButton || adminCloseButton) {
-    studentCloseButton.addEventListener("click", popupPanel(3)); 
-    adminCloseButton.addEventListener("click", popupPanel(4));
-}
-
-
+const presentButton = document.getElementById("mark-present");
 
 const adminEmail = document.getElementById("admin-email");
 const adminPassword = document.getElementById("admin-password");
@@ -20,8 +14,8 @@ console.log(adminList[0].email)
 
 function openAdminPanel(event){
     event.preventDefault();
-    console.log("Clicked")
-    for(let i = 0; i < adminList.length; i++){
+    console.log("Clicked");
+    for (let i = 0; i < adminList.length; i++){
         if (adminEmail.value == adminList[i].email && adminPassword.value == adminList[i].password){
             window.location.replace("admin-page.html");
         } else if (adminEmail.value !== adminList[i].email || adminPassword.value !== adminList[i].password) {
@@ -35,22 +29,23 @@ function openAdminPanel(event){
     //     document.getElementById("email-description").innerHTML = "Email (email or password is incorrect)"
     // }
 }
+presentButton.addEventListener("click", markPresent)
 
-function popupPanel(a){
-    if (a == 1) {
+function markPresent(){
+    
+}
+
+function PopupPanel(a){
+    if (a === 1){
+        document.querySelector("form.student-attendance-panel").style = "display: block !important";
+    }
+    else if (a === 2) {
         document.querySelector("form.admin-sign-in-panel").style = "display: block !important";
     }
-    else if (a == 2){
-        document.querySelector("form.student-attendance-panel").style = "display: block !important";
-    } 
-    else if (a == 3){
-        document.querySelector("form.student-attendance-panel").style = "display: none !important";
-    }
-    else if (a == 4){
-        document.querySelector("form.admin-sign-in-panel").style = "display: none !important";
-    }
-        
+    
 }
+
+
 
 
 
